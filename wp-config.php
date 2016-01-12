@@ -17,7 +17,6 @@
  * @package WordPress
  */
 $host = php_uname('n');
-var_dump($host);
 if($host == "182.local"){
 	define("ENVIRONMENT", "develop");
 } else {
@@ -87,7 +86,7 @@ $table_prefix  = '12_01_2016_wp_';
 if(ENVIRONMENT == "develop"){
 	define('WP_DEBUG', true);
 } else {
-	define('WP_DEBUG', false); 
+	define('WP_DEBUG', false);
 }
 
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
