@@ -24,17 +24,14 @@ if($host == "182.local"){
 	define("ENVIRONMENT", "production");
 }
 if(ENVIRONMENT=="develop"){
-	// ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
-	/** Nom de la base de données de WordPress. */
 	define('DB_NAME', 'topten');
-
-	/** Utilisateur de la base de données MySQL. */
 	define('DB_USER', 'root');
-
-	/** Mot de passe de la base de données MySQL. */
 	define('DB_PASSWORD', '');
-
-	/** Adresse de l'hébergement MySQL. */
+	define('DB_HOST', 'localhost');
+} else {
+	define('DB_NAME', 'topten');
+	define('DB_USER', 'root');
+	define('DB_PASSWORD', '');
 	define('DB_HOST', 'localhost');
 }
 
@@ -86,7 +83,12 @@ $table_prefix  = '12_01_2016_wp_';
  * de thèmes se servent de WP_DEBUG dans leur environnement de
  * développement.
  */
-define('WP_DEBUG', false);
+
+if(ENVIRONMENT == "develop"){
+	define('WP_DEBUG', true);
+} else {
+	define('WP_DEBUG', false); 
+}
 
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */
 
