@@ -2,3 +2,4 @@
 *.sass-cache*
 *.log
 wp-config.php
+.htaccess
