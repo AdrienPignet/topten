@@ -6,6 +6,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /Cours-12-01-2016/topten/index.php [L]
 </IfModule>
+<<<<<<< HEAD
 
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
@@ -18,3 +19,5 @@ RewriteRule . /topten/index.php [L]
 </IfModule>
 
 # END WordPress
+=======
+>>>>>>> Adri

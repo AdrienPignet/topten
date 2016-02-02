@@ -1,0 +1,14 @@
+.fond-rouge{
+    
+}
+
+#wp-submit{
+    @include button;
+    @extend .fond-rouge;
+}
+
+.login-remember{
+    label{
+        width: 100% !important;
+    }
+}
