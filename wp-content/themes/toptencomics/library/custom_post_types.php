@@ -41,7 +41,27 @@ function comics_post_types(){
              'hierarchical'          =>  true,
              'has_archive'           =>  true,
          );
+         $labels_serie = array(
+		'name'              => _x('Série', 'taxonomy general name'),
+		'singular_name'     => _x('Série', 'taxonomy singular name'),
+		'search_items'      => __('Rechercher une série'),
+		'all_items'         => __('Toutes les séries'),
+		'edit_item'         => __('Éditer une série'),
+		'update_item'       => __('Mettre à jour une série'),
+		'add_new_item'      => __('Ajouter une série'),
+		'new_item_name'     => __('Nouvelle série'),
+		'menu_name'         => __('Série'),
+    	);
+    	// register taxonomy
+    	register_taxonomy( 'comics', 'comics', array(
+    		'hierarchical' => false,
+    		'labels' => $labels_serie,
+    		'query_var' => true,
+    		'show_admin_column' => true,
+            'rewrite' => 'slug'
+    	) );
          register_post_type('comics', $args_comics_post_type_array);
 }
 add_action('init', 'comics_post_types', 1);
+
 ?>
