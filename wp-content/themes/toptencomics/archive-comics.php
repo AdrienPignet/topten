@@ -19,6 +19,7 @@
 get_header(); ?>
 
 <div id="page" role="main">
+	Liste des comics
 	<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 
