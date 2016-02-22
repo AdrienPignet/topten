@@ -17,7 +17,10 @@
  * @package WordPress
  */
 <<<<<<< HEAD:wp-config-sample.php
+<<<<<<< HEAD:wp-config-sample.php
 =======
+=======
+>>>>>>> development:wp-config-sample.php
 <<<<<<< HEAD:wp-config.php
 $host = php_uname('n');
 if($host == "182.local"){
@@ -38,6 +41,9 @@ if(ENVIRONMENT=="develop"){
 }
 =======
 >>>>>>> master:wp-config-sample.php
+<<<<<<< HEAD:wp-config-sample.php
+>>>>>>> development:wp-config-sample.php
+=======
 >>>>>>> development:wp-config-sample.php
 
 // ** Réglages MySQL - Votre hébergeur doit vous fournir ces informations. ** //
@@ -100,9 +106,12 @@ $table_prefix  = 'wp_';
  * de thèmes se servent de WP_DEBUG dans leur environnement de 
  * développement.
 <<<<<<< HEAD:wp-config-sample.php
+<<<<<<< HEAD:wp-config-sample.php
  */ 
 define('WP_DEBUG', false); 
 =======
+=======
+>>>>>>> development:wp-config-sample.php
 <<<<<<< HEAD:wp-config.php
  */
 
@@ -115,6 +124,9 @@ if(ENVIRONMENT == "develop"){
  */ 
 define('WP_DEBUG', false); 
 >>>>>>> master:wp-config-sample.php
+<<<<<<< HEAD:wp-config-sample.php
+>>>>>>> development:wp-config-sample.php
+=======
 >>>>>>> development:wp-config-sample.php
 
 /* C'est tout, ne touchez pas à ce qui suit ! Bon blogging ! */

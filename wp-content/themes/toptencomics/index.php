@@ -17,6 +17,7 @@
 get_header(); ?>
 
 <div id="page" role="main">
+<<<<<<< HEAD
 	<article class="main-content">
 	<?php if ( have_posts() ) :
 
@@ -33,6 +34,10 @@ get_header(); ?>
 				wp_login_form( array('rememberme'     => home_url("/?cat=1" ) )
 		?>
 		<a href="<?php echo site_url('wp')"
+=======
+	<!--<article class="main-content">
+	<?php if ( have_posts() ) : ?>
+>>>>>>> development
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -52,8 +57,38 @@ get_header(); ?>
 			</nav>
 		<?php } ?>
 
-	</article>
-	<?php get_sidebar(); ?>
+	</article>-->
+	<!-- HOME -->
+	<section class="row home">
+		<h1><?php echo get_bloginfo( 'description' ); ?></h1>
+			<form method="post" action="#">
+				<fieldset>
+				<label for="search">Recherche</label>
+				<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
+				</fieldset>
+			</form>
+			<p><a href="#">s'inscrire</a></p>
+			<p><a href="#">se connecter</a></p>
+			<img src="images/icone.png" alt"scroll" width="" height="">
+	</section>
+	<!-- HOME - SLIDER -->
+	<section class="row slider">
+
+	</section>
+	<!-- HOME - BLOG -->
+	<section class="row blog">
+		<?php if ( have_posts() ) : ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
+
+			<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); ?>
+
+			<?php endif; // End have_posts() check. ?>
+	</section>
+	<!--<?php get_sidebar(); ?>-->
 
 </div>
 
