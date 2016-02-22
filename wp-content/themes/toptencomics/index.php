@@ -18,7 +18,21 @@ get_header(); ?>
 
 <div id="page" role="main">
 	<article class="main-content">
-	<?php if ( have_posts() ) : ?>
+	<?php if ( have_posts() ) :
+
+		if (is_user_logged_in()) {
+			echo "t'es connecté";
+		}
+		else {
+			wp_login_form( array
+			('rememberme'    =>false;
+			'redirect'       =>home_url("/?cat=1")
+		)
+	);
+		}
+				wp_login_form( array('rememberme'     => home_url("/?cat=1" ) )
+		?>
+		<a href="<?php echo site_url('wp')"
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
