@@ -18,21 +18,8 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
-	Liste des comics
-	<article class="main-content">
-	<?php if ( have_posts() ) : ?>
-
-		<?php /* Start the Loop */ ?>
-		<?php while ( have_posts() ) : the_post(); ?>
-			<?php get_template_part( 'content', get_post_format() ); ?>
-		<?php endwhile; ?>
-
-		<?php else : ?>
-			<?php get_template_part( 'content', 'none' ); ?>
-
-		<?php endif; // End have_posts() check. ?>
-
+<div role="main">
+	<!--<article class="main-content">
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 			<nav id="post-nav">
@@ -40,10 +27,19 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php } ?>
+	</article>-->
+		<?php if ( have_posts() ) : ?>
 
-	</article>
-	<?php get_sidebar(); ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', 'comics' ); ?>
+			<?php endwhile; ?>
 
+			<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); ?>
+
+			<?php endif; // End have_posts() check. ?>
+	<!--</article>-->
 </div>
 
 <?php get_footer(); ?>

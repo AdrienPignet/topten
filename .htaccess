@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 <IfModule mod_rewrite.c>
 RewriteEngine On
@@ -6,4 +7,13 @@ RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /topten/index.php [L]
+=======
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /Cours-12-01-2016/topten/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /Cours-12-01-2016/topten/index.php [L]
+>>>>>>> Adri
 </IfModule>

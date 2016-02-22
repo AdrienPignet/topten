@@ -16,8 +16,8 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
-	<article class="main-content">
+<div role="main">
+	<!--<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
@@ -38,8 +38,37 @@ get_header(); ?>
 			</nav>
 		<?php } ?>
 
-	</article>
-	<?php get_sidebar(); ?>
+	</article>-->
+	<!-- HOME -->
+	<section class="home">
+		<h1><?php echo get_bloginfo( 'description' ); ?></h1>
+			<form method="post" action="#">
+				<fieldset>
+				<label for="search">Recherche</label>
+				<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
+				</fieldset>
+			</form>
+			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/register/">s'inscrire</a></p>
+			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/login/">se connecter</a></p>
+	</section>
+	<!-- HOME - SLIDER -->
+	<section class="slider">
+
+	</section>
+	<!-- HOME - BLOG -->
+	<section class="blog">
+		<?php if ( have_posts() ) : ?>
+			<?php /* Start the Loop */ ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<?php get_template_part( 'content', get_post_format() ); ?>
+			<?php endwhile; ?>
+
+			<?php else : ?>
+				<?php get_template_part( 'content', 'none' ); ?>
+
+			<?php endif; // End have_posts() check. ?>
+	</section>
+	<!--<?php get_sidebar(); ?>-->
 
 </div>
 
