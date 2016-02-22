@@ -40,7 +40,7 @@ get_header(); ?>
 
 	</article>-->
 	<!-- HOME -->
-	<section class="home">
+	<section class="home row">
 		<h1><?php echo get_bloginfo( 'description' ); ?></h1>
 			<form method="post" action="#">
 				<fieldset>
@@ -52,11 +52,11 @@ get_header(); ?>
 			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/login/">se connecter</a></p>
 	</section>
 	<!-- HOME - SLIDER -->
-	<section class="slider">
+	<section class="slider row">
 
 	</section>
 	<!-- HOME - BLOG -->
-	<section class="blog">
+	<section class="blog row">
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -66,10 +66,8 @@ get_header(); ?>
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 
-			<?php endif; // End have_posts() check. ?>
+			<?php endif;?>
 	</section>
-	<!--<?php get_sidebar(); ?>-->
-
 </div>
 
 <?php get_footer(); ?>

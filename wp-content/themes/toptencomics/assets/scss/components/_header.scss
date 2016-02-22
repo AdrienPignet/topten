@@ -1,9 +1,12 @@
 .padding-menu{
-    padding-top: 20px;
         form{
             display: inline-block;
+            vertical-align: middle;
+            padding-top: 25px;
             p{
                 color: #fff;
+                text-transform: uppercase;
+                font-family: 'american_captainregular', sans-serif;
             }
             label{
                 display: inline-block;
@@ -12,11 +15,11 @@
                 display: inline-block;
                 margin-right: 0;
                 height: 45px;
+                border: none;
                 &[type="submit"]{
                     width: 45px;
                     height: 45px;
                     background: #b5151f;
-                    border: none;
                     transition: 0.4s ease all;
                     &:hover{
                         background: #710b0f;
@@ -25,4 +28,8 @@
                 }
             }
         }
+}
+
+header{
+    text-transform: uppercase;
 }
