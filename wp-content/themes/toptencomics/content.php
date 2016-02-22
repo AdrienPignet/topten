@@ -11,9 +11,9 @@
 
 ?>
 
-<div class="small-12 medium-4 columns" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
+<div class="small-12 medium-4 columns blog" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
 		<img src="http://placehold.it/350x150">
 		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-		<?php the_content( __( 'Continue reading...', 'foundationpress' ) ); ?>
+		<?php the_excerpt(); ?>
 	<a class="readmore" href="<?php the_permalink(); ?>">Savoir la suite</a>
 </div>

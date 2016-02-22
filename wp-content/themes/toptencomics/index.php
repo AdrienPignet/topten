@@ -16,7 +16,7 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
+<div role="main">
 	<!--<article class="main-content">
 	<?php if ( have_posts() ) : ?>
 
@@ -40,7 +40,7 @@ get_header(); ?>
 
 	</article>-->
 	<!-- HOME -->
-	<section class="row home">
+	<section class="home">
 		<h1><?php echo get_bloginfo( 'description' ); ?></h1>
 			<form method="post" action="#">
 				<fieldset>
@@ -48,16 +48,15 @@ get_header(); ?>
 				<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
 				</fieldset>
 			</form>
-			<p><a href="#">s'inscrire</a></p>
-			<p><a href="#">se connecter</a></p>
-			<img src="images/icone.png" alt"scroll" width="" height="">
+			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/register/">s'inscrire</a></p>
+			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/login/">se connecter</a></p>
 	</section>
 	<!-- HOME - SLIDER -->
-	<section class="row slider">
+	<section class="slider">
 
 	</section>
 	<!-- HOME - BLOG -->
-	<section class="row blog">
+	<section class="blog">
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

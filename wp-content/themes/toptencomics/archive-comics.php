@@ -18,7 +18,7 @@
 
 get_header(); ?>
 
-<div id="page" class="row" role="main">
+<div role="main">
 	<!--<article class="main-content">
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
@@ -39,7 +39,7 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 
 			<?php endif; // End have_posts() check. ?>
-	</article>
+	<!--</article>-->
 </div>
 
 <?php get_footer(); ?>

@@ -22,68 +22,43 @@
 		<link rel="apple-touch-icon-precomposed" href="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/icons/apple-touch-icon-precomposed.png">
 		<?php wp_head(); ?>
 	</head>
-	<body style="padding:0 50px;"<?php body_class(); ?>>
+	<body<?php body_class(); ?>>
 	<?php do_action( 'foundationpress_after_body' ); ?>
 
 	<?php if ( get_theme_mod( 'wpt_mobile_menu_layout' ) == 'offcanvas' ) : ?>
-	<div class="off-canvas-wrapper">
-		<div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
 		<?php get_template_part( 'parts/mobile-off-canvas' ); ?>
 	<?php endif; ?>
 
 	<?php do_action( 'foundationpress_layout_start' ); ?>
 
-	<header id="masthead" class="site-header row" role="banner">
-		<!--<div class="title-bar" data-responsive-toggle="site-navigation">
+	<header id="masthead" class="site-header" role="banner">
+		<div class="title-bar" data-responsive-toggle="site-navigation">
 			<button class="menu-icon" type="button" data-toggle="offCanvas"></button>
 			<div class="title-bar-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.svg" alt="logo" width="80" height="auto"/></a>
 			</div>
 		</div>
 
 		<nav id="site-navigation" class="main-navigation top-bar" role="navigation">
 			<div class="top-bar-left show-for-medium">
 				<ul class="menu">
-					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></li>
+					<li class="home"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.svg" alt="logo" width="60" height="auto"/></a></li>
 				</ul>
 			</div>
-			<div class="top-bar-right">
+			<div class="top-bar-left padding-menu">
 				<?php foundationpress_top_bar_r(); ?>
-
 				<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
 					<?php get_template_part( 'parts/mobile-top-bar' ); ?>
 				<?php endif; ?>
 			</div>
-		</nav>-->
-		<div class="large-4 columns">
-			<a href="<?php echo esc_url( home_url( '/' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.svg" alt="logo" width="80" height="auto"/></a>
-			<nav class="menu-principal">
-					<?php foundationpress_top_bar_r(); ?>
-					<?php if ( ! get_theme_mod( 'wpt_mobile_menu_layout' ) || get_theme_mod( 'wpt_mobile_menu_layout' ) == 'topbar' ) : ?>
-						<?php get_template_part( 'parts/mobile-top-bar' ); ?>
-					<?php endif; ?>
-			</nav>
-		</div>
-		<div class="large-4 columns">
-			<form method="post" action="page.php">
-			  <fieldset>
-				<label for="newsletter">Recevoir le Dailyplanet</label>
-				<input type="text" name="email" id="email" placeholder="email@cerebro.com"/>
-				<label for="inscription">GO</label>
-				<input for="submit" name="go" id="go"/>
-			  </fieldset>
-			</form>
-		</div>
-		<div class="large-4 columns">
-			<nav class="top-bar-right">
-				<ul>
-					<li><a href="#">Mon compte</a></li>
-					<li><a href="#">Facebook</a></li>
-					<li><a href="#">Twitter</a></li>
-					<li><a href="#">Recherche</a></li>
-				</ul>
-			</nav>
-		</div>
+			<div class="top-bar-right padding-menu">
+				<?php foundationpress_top_bar_l(); ?>
+			</div>
+			<div class="top-bar-right padding-menu searchform-custom">
+				<?php echo do_shortcode( '[contact-form-7 id="40" title="Inscription Newsletter"]' ); ?>
+
+			</div>
+		</nav>
 	</header>
 
 	<section class="container">
