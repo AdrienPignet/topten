@@ -16,9 +16,32 @@
 
 get_header(); ?>
 
+<<<<<<< HEAD
 <div role="main">
+=======
+<div id="page" role="main">
+<<<<<<< HEAD
+	<article class="main-content">
+	<?php if ( have_posts() ) :
+
+		if (is_user_logged_in()) {
+			echo "t'es connecté";
+		}
+		else {
+			wp_login_form( array
+			('rememberme'    =>false;
+			'redirect'       =>home_url("/?cat=1")
+		)
+	);
+		}
+				wp_login_form( array('rememberme'     => home_url("/?cat=1" ) )
+		?>
+		<a href="<?php echo site_url('wp')"
+=======
+>>>>>>> Delphine
 	<!--<article class="main-content">
 	<?php if ( have_posts() ) : ?>
+>>>>>>> development
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
