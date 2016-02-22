@@ -59,9 +59,8 @@ function comics_post_types(){
     		'query_var' => true,
     		'show_admin_column' => true,
             'rewrite' => 'slug'
-    	) );
+    	));
          register_post_type('comics', $args_comics_post_type_array);
 }
 add_action('init', 'comics_post_types', 1);
-
 ?>
