@@ -6,7 +6,6 @@
   The Foundation framework is built by Zurb
   Licensed under MIT Open Source
 */
-
 //  Settings
 @import "global/settings"; // Foundation settings file.
 
@@ -97,6 +96,8 @@
 @import "components/off-canvas";
 @import "components/header";
 @import "components/footer";
+@import "components/articles";
+@import "components/home";
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";

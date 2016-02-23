@@ -1,12 +1,23 @@
+header{
+    nav.main-navigation{
+        padding: 0 40px;
+    }
+
+}
+
 .padding-menu{
         form{
             display: inline-block;
             vertical-align: middle;
             padding-top: 25px;
             p{
+                font-size: 20px;
                 color: #fff;
                 text-transform: uppercase;
                 font-family: 'american_captainregular', sans-serif;
+                .your-email{
+                    margin-left: 10px;
+                }
             }
             label{
                 display: inline-block;
@@ -16,7 +27,9 @@
                 margin-right: 0;
                 height: 45px;
                 border: none;
+                padding-left: 20px;
                 &[type="submit"]{
+                    padding-left: 10px;
                     width: 45px;
                     height: 45px;
                     background: #b5151f;
