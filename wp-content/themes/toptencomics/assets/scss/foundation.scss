@@ -6,7 +6,6 @@
   The Foundation framework is built by Zurb
   Licensed under MIT Open Source
 */
-
 //  Settings
 @import "global/settings"; // Foundation settings file.
 
@@ -70,6 +69,20 @@
   Add your scss files below to structure your project styles
 */
 
+// FONTS
+@font-face {
+    font-family: 'american_captainregular';
+    src: url('../fonts/captain/american_captain-webfont.eot');
+    src: url('../fonts/captain/american_captain-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/captain/american_captain-webfont.woff2') format('woff2'),
+         url('../fonts/captain/american_captain-webfont.woff') format('woff'),
+         url('../fonts/captain/american_captain-webfont.ttf') format('truetype'),
+         url('../fonts/captain/american_captain-webfont.svg#american_captainregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 // Modules
 @import "modules/topbar";
 @import "modules/footer";
@@ -82,7 +95,9 @@
 @import "components/dividers";
 @import "components/off-canvas";
 @import "components/header";
-
+@import "components/footer";
+@import "components/articles";
+@import "components/home";
 // Templates
 @import "templates/front";
 @import "templates/kitchen-sink";

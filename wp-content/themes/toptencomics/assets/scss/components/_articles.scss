@@ -1,0 +1,57 @@
+.blog{
+    padding: 30px;
+    h2{
+        font-family: 'american_captainregular', sans-serif;
+        font-size: 54px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .souligne{
+        width: 90px;
+        height: 12px;
+        background: #b5151f;
+        display: block;
+        margin: 0 auto;
+    }
+    article{
+        width: 400px;
+        margin: 0 auto;
+        img{
+            margin-bottom: 10px;
+        }
+        h3{
+            font-family: 'american_captainregular', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 28px;
+            a{
+                color: #000;
+                font-size: 24px;
+                font-weight: bold;
+            }
+        }
+        p{
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+        }
+        a.readmore{
+            font-size: 18px;
+            display: block;
+            text-align: center;
+            width: 276px;
+            height: 55px;
+            line-height: 55px;
+            font-family: 'american_captainregular', sans-serif;
+            text-transform: uppercase;
+            color: #b5151f;
+            border: 2px solid #b5151f;
+            transition: 0.4s ease all;
+            &:hover{
+                transition: 0.4s ease all;
+                background: #b5151f;
+                color: #fff;
+            }
+        }
+    }
+}

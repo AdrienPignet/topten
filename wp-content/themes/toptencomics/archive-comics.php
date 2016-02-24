@@ -28,6 +28,7 @@ get_header(); ?>
 			</nav>
 		<?php } ?>
 	</article>-->
+	<section class="row">
 		<?php if ( have_posts() ) : ?>
 
 			<?php /* Start the Loop */ ?>
@@ -39,6 +40,8 @@ get_header(); ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 
 			<?php endif; // End have_posts() check. ?>
+	</section>
+
 	<!--</article>-->
 </div>
 

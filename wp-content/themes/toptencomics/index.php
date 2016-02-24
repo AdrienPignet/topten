@@ -63,23 +63,42 @@ get_header(); ?>
 
 	</article>-->
 	<!-- HOME -->
-	<section class="home">
-		<h1><?php echo get_bloginfo( 'description' ); ?></h1>
-			<form method="post" action="#">
-				<fieldset>
-				<label for="search">Recherche</label>
-				<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
-				</fieldset>
-			</form>
-			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/register/">s'inscrire</a></p>
-			<p><a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/login/">se connecter</a></p>
+	<section class="home-first row">
+		<section class="background-home">
+			<div class="owl-carousel">
+			            <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover01.jpg" alt="cover01"></div>
+			            <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover02.jpg" alt="cover02"></div>
+			            <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover03.jpg" alt="cover03"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover04.jpg" alt="cover04"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover05.jpg" alt="cover05"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover06.jpg" alt="cover06"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover07.jpg" alt="cover07"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover08.jpg" alt="cover08"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover09.jpg" alt="cover09"></div>
+						<div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover10.jpg" alt="cover10"></div>
+			</div>
+		</section>
+		<section class="background-filtre"></section>
+		<article>
+			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-home.png" alt="Mascotte" />
+			<h1><?php echo get_bloginfo( 'description' ); ?></h1>
+				<form method="post" action="#">
+					<fieldset>
+					<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
+					</fieldset>
+				</form>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/register/">s'inscrire</a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/login/">se connecter</a>
+		</article>
 	</section>
 	<!-- HOME - SLIDER -->
-	<section class="slider">
+	<section class="slider row">
 
 	</section>
 	<!-- HOME - BLOG -->
-	<section class="blog">
+	<section class="blog row">
+		<h2>Derniers articles</h2>
+		<span class="souligne"></span>
 		<?php if ( have_posts() ) : ?>
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -89,10 +108,8 @@ get_header(); ?>
 			<?php else : ?>
 				<?php get_template_part( 'content', 'none' ); ?>
 
-			<?php endif; // End have_posts() check. ?>
+			<?php endif;?>
 	</section>
-	<!--<?php get_sidebar(); ?>-->
-
 </div>
 
 <?php get_footer(); ?>

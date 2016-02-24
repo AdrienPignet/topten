@@ -1,31 +1,33 @@
 .top-bar {
-
+    height: 100px;
   .menu .home a {
     font-size: 1rem;
     color: #B9B9B9;
   }
+    .menu li{
+        height: 100px;
+        line-height: 100px;
+    }
 
   .menu a {
-    height: 45px;
-    line-height: 45px;
     color: #e6e6e6;
-    padding-top: 0;
-    padding-bottom: 0;
     font-weight: bold;
-    font-size: 0.8rem;
-
+    font-size: 1.8rem;
+    font-family: 'american_captainregular', sans-serif;
+    line-height: 100px;
+    letter-spacing: 2px;
     &:hover:not(.button) {
-      background-color: #2a2a2a;
+      color: #aaaaaa;
     }
   }
 
   .menu>li:not(.menu-text)>a {
-    padding: 1rem;
+    padding: 10px;
   }
 
   .menu li:not(:last-child) {
     @include breakpoint(medium) {
-      border-right: 1px solid #4e4e4e;
+      border-right: 0px solid #4e4e4e;
     }
   }
 

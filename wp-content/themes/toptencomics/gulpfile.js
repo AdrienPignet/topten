@@ -53,6 +53,8 @@ var PATHS = {
     'assets/components/foundation-sites/js/foundation.toggler.js',
     'assets/components/foundation-sites/js/foundation.tooltip.js',
 
+    // OWL CAROUSEL
+    'assets/components/owl.carousel/dist/owl.carousel.js',
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',
 
