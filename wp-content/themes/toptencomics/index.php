@@ -13,46 +13,18 @@
  * @subpackage FoundationPress
  * @since FoundationPress 1.0.0
  */
-
 get_header(); ?>
 
-<<<<<<< HEAD
 <div role="main">
-=======
-<div id="page" role="main">
-<<<<<<< HEAD
-	<article class="main-content">
-	<?php if ( have_posts() ) :
-
-		if (is_user_logged_in()) {
-			echo "t'es connecté";
-		}
-		else {
-			wp_login_form( array
-			('rememberme'    =>false;
-			'redirect'       =>home_url("/?cat=1")
-		)
-	);
-		}
-				wp_login_form( array('rememberme'     => home_url("/?cat=1" ) )
-		?>
-		<a href="<?php echo site_url('wp')"
-=======
->>>>>>> Delphine
 	<!--<article class="main-content">
 	<?php if ( have_posts() ) : ?>
->>>>>>> development
-
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
 			<?php get_template_part( 'content', get_post_format() ); ?>
 		<?php endwhile; ?>
-
 		<?php else : ?>
 			<?php get_template_part( 'content', 'none' ); ?>
-
 		<?php endif; // End have_posts() check. ?>
-
 		<?php /* Display navigation to next/previous pages when applicable */ ?>
 		<?php if ( function_exists( 'foundationpress_pagination' ) ) { foundationpress_pagination(); } else if ( is_paged() ) { ?>
 			<nav id="post-nav">
@@ -60,7 +32,6 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php } ?>
-
 	</article>-->
 	<!-- HOME -->
 	<section class="home-first row">
@@ -81,19 +52,86 @@ get_header(); ?>
 		<section class="background-filtre"></section>
 		<article>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-home.png" alt="Mascotte" />
+			<?php
+				if ( is_user_logged_in() ) {
+					$current_user = wp_get_current_user();
+					printf( 'Bienvenue %s', esc_html( $current_user->user_firstname));
+				} else {
+
+				}
+			?>
 			<h1><?php echo get_bloginfo( 'description' ); ?></h1>
 				<form method="post" action="#">
 					<fieldset>
 					<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
 					</fieldset>
 				</form>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/register/">s'inscrire</a>
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>topten/login/">se connecter</a>
+				<div id="oModal" class="oModal">
+				  <div>
+				    <header>
+				      <a href="#fermer" title="Fermer la fenêtre" id="droite">X</a>
+				       <h2>Inscription</h2>
+				     </header>
+				     <section>
+				      <p><?php echo do_shortcode('[wpum_register form_id="" login_link="yes" psw_link="yes" register_link="no" ]');?></p>
+					  <img class="mascotte" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-inscription.svg" alt="inscription" />
+				     </section>
+				  </div>
+				</div>
+				<div id="oModal-co" class="oModal">
+				  <div>
+				    <header>
+				      <a href="#fermer" title="Fermer la fenêtre" id="droite">X</a>
+				       <h2>Connexion</h2>
+				     </header>
+				     <section>
+				      <p><?php echo do_shortcode('[wpum_login_form]');?></p>
+					  <img class="mascotte" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-inscription.svg" alt="connexion" />
+				     </section>
+				  </div>
+				</div>
+				<a href="#oModal">s'inscrire</a>
+				<a href="#oModal-co">se connecter</a>
 		</article>
 	</section>
 	<!-- HOME - SLIDER -->
-	<section class="slider row">
-
+	<section class="custom-slider row">
+		<div class="flexslider">
+		  <ul class="slides">
+		    <li>
+		      <img src="http://placehold.it/1200x700"/>
+			  <div class="flex-caption">
+   				 <span class="slide-triangle"></span>
+   				 <h3>Tu cherches un QUOI ?</h3>
+   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
+   			 </div>
+		    </li>
+		    <li>
+		      <img src="http://placehold.it/1200x700"/>
+			  <div class="flex-caption">
+   				 <span class="slide-triangle"></span>
+   				 <h3>Tu cherches un QUOI ?</h3>
+   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
+   			 </div>
+		    </li>
+		    <li>
+		      <img src="http://placehold.it/1200x700"/>
+			  <div class="flex-caption">
+   				 <span class="slide-triangle"></span>
+   				 <h3>Tu cherches un QUOI ?</h3>
+   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
+   			 </div>
+		    </li>
+		    <li>
+		      <img src="http://placehold.it/1200x700"/>
+			  <div class="flex-caption">
+   				 <span class="slide-triangle"></span>
+   				 <h3>Tu cherches un QUOI ?</h3>
+   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
+   			 </div>
+		    </li>
+		  </ul>
+		</div>
 	</section>
 	<!-- HOME - BLOG -->
 	<section class="blog row">

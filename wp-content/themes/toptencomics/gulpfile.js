@@ -55,6 +55,10 @@ var PATHS = {
 
     // OWL CAROUSEL
     'assets/components/owl.carousel/dist/owl.carousel.js',
+
+    // FLEX SLIDER
+    'assets/components/flexslider/jquery.flexslider.js',
+
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',
 

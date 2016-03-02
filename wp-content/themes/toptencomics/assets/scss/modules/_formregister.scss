@@ -1,25 +1,21 @@
-<<<<<<< HEAD
+
 .fond-rouge {
     background: #F00 !important;
 }
 
 
-=======
 .fond-rouge{
-    
+
 }
 
->>>>>>> development
 #wp-submit{
     @include button;
     @extend .fond-rouge;
 }
-<<<<<<< HEAD
-=======
+
 
 .login-remember{
     label{
         width: 100% !important;
     }
 }
->>>>>>> development

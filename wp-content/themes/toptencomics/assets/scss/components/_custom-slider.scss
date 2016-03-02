@@ -1,0 +1,56 @@
+.custom-slider{
+
+    .flexslider{
+        height: 700px;
+        border: none;
+        position: relative;
+        .custom-caption{
+            position: absolute;
+            top: -700px;
+            z-index: 999;
+        }
+        .flex-control-nav{
+            display: none;
+        }
+        img{
+            width: 100%;
+            height: 700px;
+        }
+        li{
+            position: relative;
+            .flex-caption{
+                .slide-triangle{
+                    position: absolute;
+                    right: 100%;
+                    top: 0;
+                    z-index: 99;
+                    width: 0;
+                	height: 0;
+                	border-bottom: 700px solid white;
+                	border-left: 200px solid transparent;
+                }
+                width: 30%;
+                padding: 20px;
+                position: absolute;
+                top: 0;
+                right: 0;
+                z-index: 99;
+                background: white;
+                height: 100%;
+                h3{
+                    color: red;
+                }
+            }
+        }
+        .flex-direction-nav{
+
+            top: 50%;
+            a{
+                width: 70px;
+                height: 70px;
+                z-index: 999;
+            }
+
+        }
+    }
+}

@@ -18,8 +18,7 @@
 
 get_header(); ?>
 
-<div id="page" role="main">
-	<article class="main-content">
+<div class="row">
 	<?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
@@ -39,10 +38,9 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php } ?>
-
-	</article>
-	<?php get_sidebar(); ?>
-
 </div>
+
+
+
 
 <?php get_footer(); ?>
