@@ -36,7 +36,7 @@ get_header(); ?>
 	<!-- HOME -->
 	<section class="home-first row">
 		<section class="background-home">
-			<div class="owl-carousel">
+			<div class="owl-carousel" id="carousel-background">
 			            <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover01.jpg" alt="cover01"></div>
 			            <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover02.jpg" alt="cover02"></div>
 			            <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/comics/cover03.jpg" alt="cover03"></div>
@@ -52,20 +52,19 @@ get_header(); ?>
 		<section class="background-filtre"></section>
 		<article>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-home.png" alt="Mascotte" />
-			<?php
-				if ( is_user_logged_in() ) {
-					$current_user = wp_get_current_user();
-					printf( 'Bienvenue %s', esc_html( $current_user->user_firstname));
-				} else {
-
-				}
-			?>
-			<h1><?php echo get_bloginfo( 'description' ); ?></h1>
+			<h1><?php if ( is_user_logged_in()){ echo 'Bonjour <span style="color: #b5151f"> '.$current_user->user_login.'</span><br/>';}?> <?php echo get_bloginfo( 'description' ); ?></h1>
 				<form method="post" action="#">
 					<fieldset>
 					<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
 					</fieldset>
 				</form>
+				<?php
+					if ( is_user_logged_in() ) {
+						?> <a href="#oModal-profil">Mon compte</a><a href="#oModal-logout">se déconnecter</a><?php
+					} else {
+					?> <a href="#oModal">s'inscrire</a><a href="#oModal-co">se connecter</a><?php
+					}
+				?>
 				<div id="oModal" class="oModal">
 				  <div>
 				    <header>
@@ -90,48 +89,45 @@ get_header(); ?>
 				     </section>
 				  </div>
 				</div>
-				<a href="#oModal">s'inscrire</a>
-				<a href="#oModal-co">se connecter</a>
+				<div id="oModal-profil" class="oModal">
+				  <div>
+				    <header>
+				      <a href="#fermer" title="Fermer la fenêtre" id="droite">X</a>
+				       <h2>Connexion</h2>
+				     </header>
+				     <section>
+				      <p><?php echo do_shortcode('[wpum_profile]');?></p>
+					  <img class="mascotte" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-inscription.svg" alt="connexion" />
+				     </section>
+				  </div>
+				</div>
+				<div id="oModal-logout" class="oModal">
+				  <div>
+				    <header>
+				      <a href="#fermer" title="Fermer la fenêtre" id="droite">X</a>
+				       <h2>Connexion</h2>
+				     </header>
+				     <section>
+				      <p><?php echo do_shortcode('[wpum_login_form]');?></p>
+					  <img class="mascotte" src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-inscription.svg" alt="connexion" />
+				     </section>
+				  </div>
+				</div>
 		</article>
 	</section>
 	<!-- HOME - SLIDER -->
 	<section class="custom-slider row">
-		<div class="flexslider">
-		  <ul class="slides">
-		    <li>
-		      <img src="http://placehold.it/1200x700"/>
-			  <div class="flex-caption">
-   				 <span class="slide-triangle"></span>
-   				 <h3>Tu cherches un QUOI ?</h3>
-   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
-   			 </div>
-		    </li>
-		    <li>
-		      <img src="http://placehold.it/1200x700"/>
-			  <div class="flex-caption">
-   				 <span class="slide-triangle"></span>
-   				 <h3>Tu cherches un QUOI ?</h3>
-   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
-   			 </div>
-		    </li>
-		    <li>
-		      <img src="http://placehold.it/1200x700"/>
-			  <div class="flex-caption">
-   				 <span class="slide-triangle"></span>
-   				 <h3>Tu cherches un QUOI ?</h3>
-   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
-   			 </div>
-		    </li>
-		    <li>
-		      <img src="http://placehold.it/1200x700"/>
-			  <div class="flex-caption">
-   				 <span class="slide-triangle"></span>
-   				 <h3>Tu cherches un QUOI ?</h3>
-   				 <p>Pourquoi utiliser le cérébro...<br/>Alors qu'il y a déjà la base de donnée TOP TEN</p>
-   			 </div>
-		    </li>
-		  </ul>
+		<div id="triangle"></div>
+		<div id="diagonale">
+		    <h2 class="animated fadeIn">Tu cherches<br/>un comics ?</h2><span class="redbar"></span><p class="animated fadeIn">Pourquoi utiliser un <strong>cérébro</strong>...<br />Alors qu'ils sont déjà tous dans la base de donnée <strong>TOP TEN</strong> !</p>
 		</div>
+		<div class="owl-carousel" id="carousel-custom">
+		    <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Slider-features/slider01.jpg" alt="cover01"></div>
+		    <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Slider-features/slider02.jpg" alt="cover02"></div>
+		    <div class="item"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/Slider-features/slider03.jpg" alt="cover03"></div>
+		</div>
+		<a id="image_suivante"><i class="fa fa-angle-right"></i></a>
+		<button id="image_precedente"></button>
 	</section>
 	<!-- HOME - BLOG -->
 	<section class="blog row">

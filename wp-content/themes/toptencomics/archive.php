@@ -17,7 +17,7 @@
  */
 
 get_header(); ?>
-
+<span class="bg-dechire"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/misc/bg-dechire.png"></span>
 <div class="row">
 	<?php if ( have_posts() ) : ?>
 

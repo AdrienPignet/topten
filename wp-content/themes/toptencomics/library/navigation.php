@@ -31,6 +31,13 @@ if ( ! function_exists( 'foundationpress_top_bar_r' ) ) {
         'walker' => new Foundationpress_Top_Bar_Walker(),
 	    ));
 	}
+	add_filter('nav_menu_css_class' , 'special_nav_class' , 10 , 2);
+	function special_nav_class($classes, $item){
+	     if( in_array('current-menu-item', $classes) ){
+	             $classes[] = 'active ';
+	     }
+	     return $classes;
+	}
 }
 if ( ! function_exists( 'foundationpress_top_bar_l' ) ) {
 	function foundationpress_top_bar_l() {

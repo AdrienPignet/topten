@@ -1,4 +1,5 @@
 header{
+    z-index: 99;
     nav.main-navigation{
         padding: 0 40px;
     }
@@ -45,4 +46,13 @@ header{
 
 header{
     text-transform: uppercase;
+    .menu-principal{
+        ul{
+            li.active {
+                a{
+                    color: red;
+                }
+            }
+        }
+    }
 }

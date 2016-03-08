@@ -25,7 +25,8 @@ var PATHS = {
   sass: [
     'assets/components/foundation-sites/scss',
     'assets/components/motion-ui/src',
-    'assets/components/fontawesome/scss'
+    'assets/components/fontawesome/scss',
+    'assets/components/animate.css/animate.min.css'
   ],
   javascript: [
     'assets/components/what-input/what-input.js',

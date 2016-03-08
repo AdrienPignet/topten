@@ -11,9 +11,12 @@
 
 ?>
 
-<div class="small-6 medium-4 large-2 columns" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
+<div class="small-6 medium-4 large-2 columns comics-custom" id="post-<?php the_ID(); ?>" <?php post_class('blogpost-entry'); ?>>
 	<article>
-		<img src="http://placehold.it/150x350">
+		<?php if ( has_post_thumbnail() ) {
+    			the_post_thumbnail();
+			  }
+		?>
 		<h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-	</article>	
+	</article>
 </div>

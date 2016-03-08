@@ -1,0 +1,18 @@
+.comics-custom{
+    padding: 25px;
+    img{
+        width: 100%;
+        height: 370px;
+        object-fit: cover;
+    }
+    h3{
+        background: #000;
+        font-family: 'american_captainregular', sans-serif;
+        text-transform: uppercase;
+        font-size: 30px;
+        text-align: center;
+        a{
+            color: #fff;
+        }
+    }
+}
