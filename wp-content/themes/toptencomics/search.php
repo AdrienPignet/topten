@@ -8,7 +8,9 @@
  */
 
 get_header(); ?>
+<div class="resultats">
 
+</div>
 <div class="row">
 	<div class="small-12 large-8 columns" role="main">
 
@@ -40,6 +42,5 @@ get_header(); ?>
 	<?php do_action( 'foundationpress_after_content' ); ?>
 
 	</div>
-	<?php get_sidebar(); ?>
 </div>
 <?php get_footer(); ?>

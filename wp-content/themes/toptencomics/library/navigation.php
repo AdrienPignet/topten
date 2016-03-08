@@ -51,6 +51,13 @@ if ( ! function_exists( 'foundationpress_top_bar_l' ) ) {
 				'walker' => new Foundationpress_Top_Bar_Walker(),
 			));
 	}
+	add_filter('nav_menu_css_class_l' , 'special_nav_class_l' , 10 , 2);
+	function special_nav_class_l($classes, $item){
+	     if( in_array('current-menu-item', $classes) ){
+	             $classes[] = 'active ';
+	     }
+	     return $classes;
+	}
 }
 /**
  * Mobile navigation - topbar (default) or offcanvas

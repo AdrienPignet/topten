@@ -29,7 +29,9 @@
        </div>
    </article>
  <?php endwhile ;?>
+<div class="resultats">
 
+</div>
  <?php do_action( 'foundationpress_after_content' ); ?>
 
  </div>

@@ -52,12 +52,8 @@ get_header(); ?>
 		<section class="background-filtre"></section>
 		<article>
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-home.png" alt="Mascotte" />
-			<h1><?php if ( is_user_logged_in()){ echo 'Bonjour <span style="color: #b5151f"> '.$current_user->user_login.'</span><br/>';}?> <?php echo get_bloginfo( 'description' ); ?></h1>
-				<form method="post" action="#">
-					<fieldset>
-					<input type="text" name="recherche" id="recherche" placeholder="Tu recherches un comics, une série, un héros ?"/>
-					</fieldset>
-				</form>
+			<h1><?php if ( is_user_logged_in()){ echo 'Bonjour <span style="color: #eb212e"> '.$current_user->user_login.'</span><br/>';}?> <?php echo get_bloginfo( 'description' ); ?></h1>
+				<?php get_search_form(); ?>
 				<?php
 					if ( is_user_logged_in() ) {
 						?> <a href="#oModal-profil">Mon compte</a><a href="#oModal-logout">se déconnecter</a><?php

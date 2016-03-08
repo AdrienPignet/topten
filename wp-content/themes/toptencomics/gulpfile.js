@@ -60,6 +60,12 @@ var PATHS = {
     // FLEX SLIDER
     'assets/components/flexslider/jquery.flexslider.js',
 
+    // md5
+    'assets/components/js-md5/src/md5.js',
+
+    // MUSTACHE
+    'assets/components/mustache.js/mustache.js',
+
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',
 
