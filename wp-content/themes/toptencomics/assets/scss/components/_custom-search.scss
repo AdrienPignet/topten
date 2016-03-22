@@ -8,6 +8,11 @@
             width: 100%;
             background: #eb212e;
             font-family: 'american_captainregular', sans-serif;
+            transition: 0.4s ease all;
+            &:hover{
+                background: #b5151f;
+                transition: 0.4s ease all;
+            }
         }
     }
 }

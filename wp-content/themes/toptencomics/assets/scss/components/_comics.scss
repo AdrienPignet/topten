@@ -8,6 +8,35 @@
         align-items: center;
         justify-content: center;
     }
+    article{
+        position: relative;
+        a.add-to-collection{
+            position: absolute;
+            right: -10px;
+            top: -10px;
+            background: #eb212e;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            line-height: 50px;
+            color: #fff;
+            transition: 0.4s ease all;
+            font-family:'american_captainregular', sans-serif;
+            font-size: 18px;
+            overflow: hidden;
+            &:hover{
+                width: 150px;
+                transition: 0.4s ease all;
+                i{
+                    margin-left: 10px;
+                    display: inline-block;
+                }
+                &:before{
+                    content: "Ajouter";
+                }
+            }
+        }
+    }
     a{
         h3{
             background: #000;

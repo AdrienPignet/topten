@@ -21,7 +21,7 @@
  <?php while ( have_posts() ) : the_post(); ?>
    <article class="small-12 columns end" id="post-<?php the_ID(); ?>">
        <header>
-           <h1 class="entry-title"><?php the_title(); ?><script type="text/javascript">alert(idSerie);</script></h1>
+           <h1 class="entry-title"><?php the_title(); ?><script type="text/javascript">document.write(idSerie);</script></h1>
        </header>
        <?php do_action( 'foundationpress_page_before_entry_content' ); ?>
        <div class="entry-content">
