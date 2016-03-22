@@ -1,18 +1,43 @@
 .comics-custom{
     padding: 25px;
     img{
+        object-fit: cover;
         width: 100%;
         height: 370px;
-        object-fit: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    a{
+        h3{
+            background: #000;
+            font-family: 'american_captainregular', sans-serif;
+            text-transform: uppercase;
+            font-size: 24px;
+            line-height: 24px;
+            text-align: center;
+            height: 90px;
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            }
     }
     h3{
         background: #000;
         font-family: 'american_captainregular', sans-serif;
         text-transform: uppercase;
-        font-size: 30px;
+        font-size: 24px;
+        line-height: 24px;
         text-align: center;
-        a{
-            color: #fff;
+        height: 90px;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         }
-    }
 }

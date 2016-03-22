@@ -14,7 +14,7 @@
 			<footer class="footer" id="footer">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo.svg" alt="logo" width="80" height="auto"/></a>
 				<p>© TOPTEN COMICS - 2016</p>
-				<span class="on-right"><a href="#"> / Mentions légales</a></span>
+				<span class="on-right"><a href="#">/ Mentions légales</a></span>
 				<span class="on-right"><?php echo do_shortcode( '[contact-form-7 id="40" title="Inscription Newsletter"]' ); ?></span>
 			</footer>
 

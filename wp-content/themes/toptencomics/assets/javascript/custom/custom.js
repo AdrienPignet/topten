@@ -173,17 +173,22 @@ $(document).ready(function(){
     		//console.log(searchTerm);
     		//var idSerie = window.location.hash.substr(1);
     		//marvelAPI.comics(idSerie);
+			var searchTerm = window.location.hash.substr(1);
+			//var searchTerm = window.location.search.substr(3);
+			//console.log(searchTerm);
+			//var idSerie = window.location.hash.substr(1);
+			marvelAPI.comics(searchTerm);
 		}
 		else
 		{
 			console.log('Je suis sur une page comics');
-
+			var idSerie = window.location.hash.substr(1);
+			//var searchTerm = window.location.search.substr(3);
+			//console.log(searchTerm);
+			//var idSerie = window.location.hash.substr(1);
+			marvelAPI.comics(idSerie);
 		}
 
-		var idSerie = window.location.hash.substr(1);
-		//var searchTerm = window.location.search.substr(3);
-		//console.log(searchTerm);
-		//var idSerie = window.location.hash.substr(1);
-		marvelAPI.comics(idSerie);
+
 	}
 });

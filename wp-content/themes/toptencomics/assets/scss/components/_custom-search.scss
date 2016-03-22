@@ -1,0 +1,37 @@
+.custom-search{
+    padding: 20px 0;
+    div{
+        input{
+            height: 56px;
+        }
+        input[type="submit"]{
+            width: 100%;
+            background: #eb212e;
+            font-family: 'american_captainregular', sans-serif;
+        }
+    }
+}
+
+.page-search{
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+
+}
+
+.search-title{
+        font-family: 'american_captainregular', sans-serif;
+        font-size: 54px;
+        display: block;
+        margin: 0 auto;
+        text-align: center;
+        text-transform: uppercase;
+}
+
+.souligne{
+    width: 90px;
+    height: 12px;
+    background: #eb212e;
+    display: block;
+    margin: 0 auto;
+}

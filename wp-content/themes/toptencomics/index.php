@@ -50,15 +50,15 @@ get_header(); ?>
 			</div>
 		</section>
 		<section class="background-filtre"></section>
-		<article>
+		<article class="custom-head">
 			<img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/mascotte/mascotte-home.png" alt="Mascotte" />
 			<h1><?php if ( is_user_logged_in()){ echo 'Bonjour <span style="color: #eb212e"> '.$current_user->user_login.'</span><br/>';}?> <?php echo get_bloginfo( 'description' ); ?></h1>
-				<?php get_search_form(); ?>
+				<div class="custom-search"><?php get_search_form(); ?></div>
 				<?php
 					if ( is_user_logged_in() ) {
-						?> <a href="#oModal-profil">Mon compte</a><a href="#oModal-logout">se déconnecter</a><?php
+						?> <span class="link-left"><a href="#oModal-profil" class="small-12 medium-6 columns">Mon compte</a></span><span class="link-right"><a href="#oModal-logout" class="small-12 medium-6 columns">se déconnecter</a></span><?php
 					} else {
-					?> <a href="#oModal">s'inscrire</a><a href="#oModal-co">se connecter</a><?php
+					?> <span class="link-left"><a href="#oModal" class="small-12 medium-6 columns">s'inscrire</a></span><span class="link-right"><a href="#oModal-co" class="small-12 medium-6 columns">se connecter</a></span><?php
 					}
 				?>
 				<div id="oModal" class="oModal">

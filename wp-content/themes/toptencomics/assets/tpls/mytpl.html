@@ -1,6 +1,6 @@
 <script id="series" type="html/text">
 {{#bidule}}
-<div class="small-6 medium-4 large-2 columns comics-custom" id="post-{{id}}">
+<div class="small-12 medium-4 large-2 columns comics-custom end" id="post-{{id}}">
     <article>
         <a href="./comics/#{{id}}">
             <img src="{{thumbnail.path}}.jpg">
@@ -13,12 +13,10 @@
 
 <script id="comics" type="html/text">
 {{#bidule}}
-<div class="small-6 medium-4 large-2 columns comics-custom" id="post-{{id}}">
+<div class="small-12 medium-4 large-2 columns comics-custom end" id="post-{{id}}">
     <article>
-        <a href="./series/#{{id}}">
             <img src="{{thumbnail.path}}.jpg">
             <h3>{{title}}</h3>
-        </a>
     </article>
 </div>
 {{/bidule}}
