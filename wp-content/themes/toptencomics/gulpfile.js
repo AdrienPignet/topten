@@ -25,7 +25,8 @@ var PATHS = {
   sass: [
     'assets/components/foundation-sites/scss',
     'assets/components/motion-ui/src',
-    'assets/components/fontawesome/scss'
+    'assets/components/fontawesome/scss',
+    'assets/components/animate.css/animate.min.css'
   ],
   javascript: [
     'assets/components/what-input/what-input.js',
@@ -52,6 +53,18 @@ var PATHS = {
     'assets/components/foundation-sites/js/foundation.tabs.js',
     'assets/components/foundation-sites/js/foundation.toggler.js',
     'assets/components/foundation-sites/js/foundation.tooltip.js',
+
+    // OWL CAROUSEL
+    'assets/components/owl.carousel/dist/owl.carousel.js',
+
+    // FLEX SLIDER
+    'assets/components/flexslider/jquery.flexslider.js',
+
+    // md5
+    'assets/components/js-md5/src/md5.js',
+
+    // MUSTACHE
+    'assets/components/mustache.js/mustache.js',
 
     // Motion UI
     'assets/components/motion-ui/motion-ui.js',

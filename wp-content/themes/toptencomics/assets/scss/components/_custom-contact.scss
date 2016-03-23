@@ -1,0 +1,76 @@
+.map-topten{
+    margin-top: -10px;
+    background: url('../images/contact/topten-map-marker.jpg') center center no-repeat;
+    height: 40vh;
+    background-size: cover;
+    margin-bottom: 95px;
+}
+.contact-boutique{
+    padding-bottom: 400px;
+    background: url('../images/background/contact.png') center bottom no-repeat;
+    h2{
+        font-family: 'american_captainregular', sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        line-height: 28px;
+        padding: 20px;
+        margin-bottom: 40px;
+        span{
+            margin-top: 20px;
+        }
+    }
+    .info-boutique{
+        background: #f8f8f8;
+        border: 1px solid #9a9a9a;
+        padding: 30px 20px;
+        p{
+            margin-top: 30px;
+            font-family: 'Raleway', sans-serif;
+            font-size: 16px;
+            strong{
+                color: #eb212e;
+            }
+        }
+    }
+    form{
+        .input-content{
+            margin: 0;
+            input{
+                height: 85px;
+                font-family: 'american_captainregular', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 28px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        .input-big{
+            margin: 0;
+            textarea{
+                height: 300px;
+                font-family: 'american_captainregular', sans-serif;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+                line-height: 28px;
+                padding: 20px;
+                margin-bottom: 20px;
+            }
+        }
+        input[type="submit"]{
+            padding: 0 80px;
+            height: 60px;
+            background: url('../images/misc/readmore.png') right center no-repeat #eb212e;
+            font-family: 'american_captainregular', sans-serif;
+            transition: 0.4s ease all;
+            border: none;
+            font-size: 40px;
+            color: #fff;
+            margin-right: -5px;
+            &:hover{
+                background: url('../images/misc/readmore.png') right center no-repeat #b5151f;
+                transition: 0.4s ease all;
+            }
+        }
+    }
+}

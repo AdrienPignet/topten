@@ -17,10 +17,11 @@
  */
 
 get_header(); ?>
-
-<div id="page" role="main">
-	<article class="main-content">
-	<?php if ( have_posts() ) : ?>
+<span class="bg-dechire"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/misc/bg-dechire.png"></span>
+<div class="row blog-list">
+	<h2><?php single_cat_title(); ?></h2>
+	<span class="souligne"></span>
+	<div class="archive"><?php if ( have_posts() ) : ?>
 
 		<?php /* Start the Loop */ ?>
 		<?php while ( have_posts() ) : the_post(); ?>
@@ -39,10 +40,10 @@ get_header(); ?>
 				<div class="post-next"><?php previous_posts_link( __( 'Newer posts &rarr;', 'foundationpress' ) ); ?></div>
 			</nav>
 		<?php } ?>
-
-	</article>
-	<?php get_sidebar(); ?>
-
+	</div>
 </div>
+
+
+
 
 <?php get_footer(); ?>
